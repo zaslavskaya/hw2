@@ -1,37 +1,74 @@
-$(document).ready(function(){
+//слайдер 
+$(document).ready(function() {
+    var countitem = 0;
 
-	$('.slider_controls-bautton').on('click', function(e) {
-		      e.preventDefault();
-
-		      var 
-		      	$this = $(this),
-		      	container = $this.closest('.slider'),
-		      	list = container.find('.slider__content'),
-		      	items = container.find('slider__items'),
-		      	activeSlide = items.filter('.active'),
-		      	nextSlide = activeSlide.next(),
-		      	prevslide = activeSlide.prev(),
-		      	FirstSlide = items.first(),
-		      	LastSlide = items.last(),
-		      	sliderOffset = container.offset().left,
-		      	reqPos = 0;
+    $('.list-portfel li').each(function(index, element) {
+        ++countitem;
+    });
+    $('.list-portfel').css('width', 740 * countitem);
 
 
-		     if ($(this)).hasClass('slider_controls-bautton-next')) {
+    $('#next').click(function() {
+        var sl = $('#portfel').scrollLeft();
+        var newsl = Number(sl) + Number(740);
+        $('#portfel').animate({
+            scrollLeft: newsl
+        }, 'slow');
+    });
+    $('#prev').click(function() {
+        var sl = $('#portfel').scrollLeft();
+        var newsl = sl - 740;
+        $('#portfel').animate({
+            scrollLeft: newsl
+        }, 'slow');
+    });
 
-		           reqPos = nextSlide.offset().left - sliderOffset;
+    //валидация формы плагин 
 
-		           nextSlide.addClass('active').siblings().removeClass('active');
+    $("#myForm").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 3
+            },
+            phone: {
+                required: true,
+                minlength: 8
+            },
 
-		     } 	else {
+            comments: {
+                required: true,
+                minlength: 10
 
-		     	reqPos = prevSlide.offset().left - sliderOffset;
+            },
+        },
+        messages: {
+            name: {
+                required: 'Введите имя:',
+                minlength: '> 3-х букв'
+            },
+            phone: {
+                required: 'Введите телефон:',
+                minlength: '> 8-ми цифр'
+            },
 
-		     	prevSlide.addClass('active').siblings().removeClass('active');
-		     }
+            comments: {
+                required: 'Оставьте комментарий!',
+                minlength: 'Напишите больше'
 
-		     list.css('left', '-=' + reqPos +'px');
+            },
+        },
 
-		 });
+        success: function(label) {
+
+            label.text('Верно!').addClass('valid');
+
+        },
+
+
+    });
+
+
+
 
 });

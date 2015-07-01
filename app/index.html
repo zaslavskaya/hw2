@@ -11,8 +11,8 @@
     <meta name="keywords" content="apple. mobile">
     <meta name="author" content="Заславская Анастасия">
     <!-- favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- CSS CSS -->
     <link rel="stylesheet" type="text/css" href="bower/normalize.css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
@@ -37,20 +37,20 @@
                         </div>
                         <!-- logo end-->
                         <!-- form-->
-                        <form class="formblock" name="form" action="#">
+                        <form class="formblock" name="form" id="myForm" action="#">
                             <h3 class="formblock__name titles-style">Заказать звонок</h3>
                             <div class="formblock__label-input__wrapper-out">
                                 <div class="formblock__label-input__wrapper">
                                     <label class="formblock__label">Ваше имя</label>
-                                    <input class="formblock__inputs" placeholder="Константин" />
+                                    <input class="formblock__inputs" placeholder="Константин" name="name" />
                                 </div>
                                 <div class="formblock__label-input__wrapper">
                                     <label class="formblock__label">Телефон</label>
-                                    <input class="formblock__inputs" placeholder="+7(912) 000-00-00" />
+                                    <input class="formblock__inputs" name="phone" placeholder="+7(912) 000-00-00" />
                                 </div>
                                 <div class="formblock__label-input__wrapper">
                                     <label class="formblock__label">Дата звонка</label>
-                                    <select class="formblock__inputs__select-month">
+                                    <select class="formblock__inputs__select-month" name="date">
                                         <option value="1">01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
@@ -64,7 +64,7 @@
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-                                    <select class="formblock__inputs__select-day">
+                                    <select class="formblock__inputs__select-day" name="date">
                                         <option value="1">01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
@@ -77,9 +77,28 @@
                                         <option value="10">10</option>
                                         <option value="11">11</option>
                                         <option value="12">12</option>
+                                        <option value="1">13</option>
+                                        <option value="2">14</option>
+                                        <option value="3">15</option>
+                                        <option value="4">16</option>
+                                        <option value="5">17</option>
+                                        <option value="6">18</option>
+                                        <option value="7">19</option>
+                                        <option value="8">20</option>
+                                        <option value="9">21</option>
+                                        <option value="10">22</option>
+                                        <option value="11">23</option>
+                                        <option value="12">24</option>
+                                        <option value="10">25</option>
+                                        <option value="11">26</option>
+                                        <option value="12">27</option>
+                                        <option value="1">28</option>
+                                        <option value="2">29</option>
+                                        <option value="3">30</option>
+                                        <option value="4">31</option>
                                     </select>
                                 </div>
-                                <textarea class="formblock__textarea" placeholder="Комментарий"></textarea>
+                                <textarea class="formblock__textarea" placeholder="Комментарий" name="comments"></textarea>
                                 <div class="formblock__label-input__wrapper">
                                     <button class="formblock__inputs-button-send" value="отправить" type="submit">Отправить</button>
                                     <button class="formblock__inputs-button-clean" value="очистить" type="reset">Очистить</button>
@@ -93,63 +112,63 @@
                                 <li class="gallery__item ">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery1.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery1.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="gallery__item ">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery2.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery2.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="gallery__item ">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery3.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery3.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="gallery__item ">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery4.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery4.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="gallery__item ">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery5.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery5.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="gallery__item ">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery6.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery6.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="gallery__item ">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery7.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery7.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="gallery__item">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery8.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery8.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="gallery__item ">
                                     <div class="gallery__item-image">
                                         <a href="#">
-                                            <img src="images/gallery9.jpg" alt="gallery">
+                                            <img class="gallery__img" src="images/gallery9.jpg" alt="gallery">
                                         </a>
                                     </div>
                                 </li>
@@ -160,7 +179,7 @@
                         <div class="contacts-wrap">
                             <ul class="contacts">
                                 <li class="contacts__item contacts__item-adress">г. Москва ул. Новая 246, офис 214.</li>
-                                <li class="contacts__item contacts__item-phone">+7(921) 322-12-32</li>
+                                <li class="contacts__item contacts__item-phone"><a class="contacts_phone" href="tel:7(921) 322-12-32">+7(921) 322-12-32</a></li>
                             </ul>
                         </div>
                         <!--contacts end-->
@@ -177,28 +196,28 @@
                                         <div class="slider__sign">
                                             <a class="slider__sign-link" href="#">IMAC з полцены</a>
                                             <p class="slider__sign-descr">Принеси свой старый МАК и получи скидку на новый!</p>
-                                         </div>
+                                        </div>
                                     </li>
                                     <li class="slider__items">
                                         <img src="images/Slide2.jpg" alt="slider">
                                         <div class="slider__sign">
                                             <a class="slider__sign-link" href="#">Телефон з полцены</a>
-                                            <p class="slider__sign-descr">Принеси свой старый  и получи скидку на новый!</p>
-                                         </div>
+                                            <p class="slider__sign-descr">Принеси свой старый и получи скидку на новый!</p>
+                                        </div>
                                     </li>
                                     <li class="slider__items">
                                         <img src="images/slide3.jpg" alt="slider">
-                                          <div class="slider__sign">
+                                        <div class="slider__sign">
                                             <a class="slider__sign-link" href="#">Телефон з полцены</a>
-                                            <p class="slider__sign-descr">Принеси свой старый  и получи скидку на новый!</p>
-                                         </div>
+                                            <p class="slider__sign-descr">Принеси свой старый и получи скидку на новый!</p>
+                                        </div>
                                     </li>
                                     <li class="slider__items">
                                         <img src="images/slide1.jpg" alt="slider">
-                                          <div class="slider__sign">
+                                        <div class="slider__sign">
                                             <a class="slider__sign-link" href="#">IMAC з полцены</a>
                                             <p class="slider__sign-descr">Принеси свой старый МАК и получи скидку на новый! А может и нет.</p>
-                                         </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -222,7 +241,8 @@
                                                 <div class="goods__item-img">
                                                     <img class="goods__image" src="images/item1.png">
                                                 </div>
-                                                <a class="goods__item-links" href="#">linklinklink</a>
+                                                <a class="goods__item-links" href="#">Apple Thunderb
+                                                     Display 27"</a>
                                             </div>
                                             <ul class="goods__item-description">
                                                 <li class="goods__item-description_li">
@@ -255,7 +275,7 @@
                                                 <div class="goods__item-img">
                                                     <img class="goods__image" src="images/item2.png">
                                                 </div>
-                                                <a class="goods__item-links" href="#">link</a>
+                                                <a class="goods__item-links" href="#">iMac 27"</a>
                                             </div>
                                             <ul class="goods__item-description">
                                                 <li class="goods__item-description_li">
@@ -288,7 +308,7 @@
                                                 <div class="goods__item-img">
                                                     <img class="goods__image" src="images/item3.png">
                                                 </div>
-                                                <a class="goods__item-links" href="#">link</a>
+                                                <a class="goods__item-links" href="#">iPhone 5s Gold</a>
                                             </div>
                                             <ul class="goods__item-description">
                                                 <li class="goods__item-description_li">
@@ -332,7 +352,7 @@
                                                 <div class="goods__item-img">
                                                     <img class="goods__image" src="images/item4.png">
                                                 </div>
-                                                <a class="goods__item-links" href="#">link</a>
+                                                <a class="goods__item-links" href="#">iPad Air Wi-Fi  128GB - Silver</a>
                                             </div>
                                             <ul class="goods__item-description">
                                                 <li class="goods__item-description_li">
@@ -365,7 +385,7 @@
                                                 <div class="goods__item-img">
                                                     <img class="goods__image" src="images/item5.png">
                                                 </div>
-                                                <a class="goods__item-links" href="#">link</a>
+                                                <a class="goods__item-links" href="#">Apple iPod nano 7G 16 ГБ Blue</a>
                                             </div>
                                             <ul class="goods__item-description">
                                                 <li class="goods__item-description_li">
@@ -398,7 +418,7 @@
                                                 <div class="goods__item-img">
                                                     <img class="goods__image" src="images/item6.png">
                                                 </div>
-                                                <a class="goods__item-links" href="#">link</a>
+                                                <a class="goods__item-links" href="#">Роутер Wi-Fi Apple AirPort </a>
                                             </div>
                                             <ul class="goods__item-description">
                                                 <li class="goods__item-description_li">
@@ -434,7 +454,7 @@
                 <footer class="footer">
                     <div class="container">
                         <!--bottom logo-->
-                        <div class="bottom-logo-wrap">
+                        <div class="bottom-logo-wrap" id="top">
                             <div class="bottom-logo">
                                 <img src="images/logo_bottom.png">
                             </div>
@@ -495,32 +515,21 @@
                 </footer>
             </div>
     </body>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script>
-    var countitem = 0;
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+  
     $(document).ready(function() {
-        $('.list-portfel li').each(function(index, element) {
-            ++countitem;
-        });
-        $('.list-portfel').css('width', 740 * countitem);
+        var top_show = 150;
+        var delay = 1000;
 
-
-        $('#next').click(function() {
-            var sl = $('#portfel').scrollLeft();
-            var newsl = Number(sl) + Number(740);
-            $('#portfel').animate({
-                scrollLeft: newsl
-            }, 'slow');
-        });
-        $('#prev').click(function() {
-            var sl = $('#portfel').scrollLeft();
-            var newsl = sl - 740;
-            $('#portfel').animate({
-                scrollLeft: newsl
-            }, 'slow');
+        $('#top').click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, delay);
         });
     });
     </script>
-    <script src="mymain.js"></script>
 
 </html>

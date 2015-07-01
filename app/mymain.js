@@ -1,89 +1,234 @@
+$(document).ready(function(){
 
-(function() {
+	if ($('.popup').length) {
+		Popups.init()
+	}
 
-    var app = {
+	$('#form').on('submit', function(e){
+		e.preventDefault();
 
-        initialize: function() {
-            this.modules();
-            this.setUpListeners();
-        },
+		var
+			$this = $(this);
 
-        modules: function() {
+		if (validateThis($this)) {
 
-        },
+			postFormData($this, function(data){
+				var
+					reqPopup = data.status ? '#success' : '#error';
 
-        setUpListeners: function() {
-            $('form').on('submit', app.submitForm);
-            $('form').on('keydown', 'input, textarea ', app.removeError);
-        },
+				Popups.open(reqPopup);
+			});
+		}
+	});
 
-        submitForm: function(e) {
-            e.preventDefault();
+}); // - > ready_end;
 
-            var form = $(this);
+var Popups = (function() {
 
-            if (app.validateForm(form) === false) return false;
+    var
+	    popups = $('.popup');
 
-        },
+	function _close(){
+		popups.hide();
+	}
 
-        validateForm: function(form) {
-            var inputs = form.find('input.inputs'),
-                inputsl = form.find('input.leftInput, textarea.leftInput'), 
-                valid = true;
+    return {
+	    
+	    init : function(){
+		    $('.popup__close, .popup__overlay').on('click', function(e){
+			    e.preventDefault();
 
-            inputs.tooltip('destroy');
+			    _close();
+		    });
+	    },
 
-            $.each(inputs, function(index, val) {
-                var input = $(val),
-                    val = input.val(),
-                    formGroup = input.parents('.parent_form'),
-                    label = formGroup.find('label').text().toLowerCase(),
-                    textError = 'Введите  ' + label;
+	    open: function(id) {
+		    var
+			    reqPopup = popups.filter(id);
 
-                if (val.length === 0) {
-                    formGroup.addClass('has-error').removeClass('has-success');
-                    input.tooltip({
-                        trigger: 'manual',
-                        placement: 'right',
-                        title: textError
-                    }).tooltip('show');
-                    valid = false;
-                } else {
-                    formGroup.addClass('has-success').removeClass('has-error');
-                }
+		    _close();
 
-            });
-
-            $.each(inputsl, function(index, val) {
-                var input = $(val),
-                    val = input.val(),
-                    formGroup = input.parents('.parent_form'),
-                    label = formGroup.find('label').text().toLowerCase(),
-                    textError = 'Введите  ' + label;
-
-                if (val.length === 0) {
-                    formGroup.addClass('has-error').removeClass('has-success');
-                    input.tooltip({
-                        trigger: 'manual',
-                        placement: 'left',
-                        title: textError
-                    }).tooltip('show');
-                    valid = false;
-                } else {
-                    formGroup.addClass('has-success').removeClass('has-error');
-                }
-
-            });
-
-            return valid;
-        },
-
-        removeError: function() {
-            $(this).tooltip('destroy').parents('.parent_form').removeClass('has-error');
-        }
-
-    };
-
-    app.initialize();
-
+		    reqPopup.fadeIn(300);
+	    }
+    }
 }());
+
+function postFormData(form, successCallback) {
+	var
+		host        = form.attr('action'),
+		reqFields   = form.find('[name]'),
+		dataObject  = {};
+
+	if (!host) {
+		console.log('set action attribute to your form, you fool!!');
+	}
+
+	reqFields.each(function(){
+		var
+			$this = $(this),
+			value = $this.val(),
+			name  = $this.attr('name');
+
+		dataObject[name] = value;
+	});
+
+	$.post(host, dataObject, successCallback);
+}
+
+
+/* --------- валидация --------- */
+
+function validateThis(form) {
+
+	var
+		textType = form.find("[data-validation='text']"),
+		mailType = form.find("[data-validation='mail']"),
+		isValid = false;
+
+	textType.each(function(){
+
+		var
+			$this = $(this),
+			notEmptyField = !!$this.val();
+
+		if (notEmptyField) {
+			isValid = true;
+		} else {
+			$this.tooltip({
+				content: 'Заполните поле',
+				position: 'left'
+			});
+
+			isValid = false;
+		}
+	});
+
+	mailType.each(function(){
+		var
+			$this = $(this),
+			regExp = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/,
+			isMail = regExp.test($this.val());
+
+		if (isMail) {
+			isValid = true;
+		} else {
+			$this.tooltip({
+				content : 'Неверный e-mail',
+				position : 'bottom'
+			});
+			isValid = false;
+		}
+	});
+
+	return isValid
+}
+
+$.fn.tooltip = function(options) {
+
+	options = {
+		position    : options.position || 'right',
+		content     : options.content || 'I am tooltip'
+	};
+
+	var
+		markup = '<div class="tooltip tooltip_' + options.position + '"> \
+						<div class="tooltip__inner">' + options.content + '</div> \
+					</div>';
+
+	var
+		$this = this,
+		body = $('body');
+
+	$this
+		.addClass('tooltipstered')
+		.attr('data-tooltip-position', options.position);
+
+	body.append(markup);
+
+	_positionIt($this, body.find('.tooltip').last(), options.position);
+
+
+	$(document).on('click', function(){
+		$('.tooltip').remove();
+	});
+
+	$(window).on('resize', function(){
+
+		var
+			tooltips = $('.tooltip');
+
+		var
+			tooltipsArray = [];
+
+		tooltips.each(function(){
+			tooltipsArray.push($(this));
+		});
+
+		$('.tooltipstered').each(function(index){
+			var
+				position = $(this).data('tooltip-position');
+
+			_positionIt($(this), tooltipsArray[index], position);
+		});
+
+	});
+
+	function _positionIt(elem, tooltip, position) {
+
+		//измеряем элемент
+
+		var
+			elemWidth   = elem.outerWidth(true),
+			elemHeight  = elem.outerHeight(true),
+			topEdge     = elem.offset().top,
+			bottomEdge  = topEdge + elemHeight,
+			leftEdge    = elem.offset().left,
+			rightEdge   = leftEdge + elemWidth;
+
+		// измеряем тултип
+
+		var
+			tooltipWidth    = tooltip.outerWidth(true),
+			tooltipHeight   = tooltip.outerHeight(true),
+			leftCentered    = (elemWidth / 2) - (tooltipWidth / 2),
+			topCentered     = (elemHeight / 2) - (tooltipHeight / 2);
+
+
+		var positions = {};
+
+		switch (position) {
+			case 'right' :
+				positions = {
+					left : rightEdge,
+					top : topEdge + topCentered
+				};
+				break;
+			case 'top' :
+				positions = {
+					left: leftEdge + leftCentered,
+					top : topEdge - tooltipHeight
+				};
+				break;
+			case 'bottom' :
+				positions = {
+					left : leftEdge + leftCentered,
+					top : bottomEdge
+				};
+				break;
+			case 'left' :
+				positions = {
+					left : leftEdge - tooltipWidth,
+					top : topEdge + topCentered
+				};
+				break;
+		}
+
+		tooltip
+			.offset(positions)
+			.css('opacity', '1');
+	}
+
+
+};
+
+<script type="text/javascript" src="bower/jquery-validation/dist/jquery.validate.js"></script>
