@@ -17,8 +17,7 @@
     <link rel="stylesheet" type="text/css" href="bower/normalize.css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
     <!-- JS-->
-    <script type="text/javascript" src="bower/modernizr/modernizr.js">
-    </script>
+    <script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
 </head>
 
 <body>
@@ -38,7 +37,7 @@
                         </div>
                         <!-- logo end-->
                         <!-- form-->
-                        <form class="formblock" action="#">
+                        <form class="formblock" name="form" action="#">
                             <h3 class="formblock__name titles-style">Заказать звонок</h3>
                             <div class="formblock__label-input__wrapper-out">
                                 <div class="formblock__label-input__wrapper">
@@ -170,121 +169,153 @@
                     <!-- main block-->
                     <section class="change-content">
                         <!--slider-->
-                        <article class="slider-wrap">
-                            <div class="slider">
-                                <div class="slider__content"></div>
+                        <article class="slider">
+                            <div class="slider__content-wrapper" id="portfel">
+                                <ul class="list-portfel slider__content">
+                                    <li class="slider__items">
+                                        <img src="images/slide1.jpg" alt="slider">
+                                        <div class="slider__sign">
+                                            <a class="slider__sign-link" href="#">IMAC з полцены</a>
+                                            <p class="slider__sign-descr">Принеси свой старый МАК и получи скидку на новый!</p>
+                                         </div>
+                                    </li>
+                                    <li class="slider__items">
+                                        <img src="images/Slide2.jpg" alt="slider">
+                                        <div class="slider__sign">
+                                            <a class="slider__sign-link" href="#">Телефон з полцены</a>
+                                            <p class="slider__sign-descr">Принеси свой старый  и получи скидку на новый!</p>
+                                         </div>
+                                    </li>
+                                    <li class="slider__items">
+                                        <img src="images/slide3.jpg" alt="slider">
+                                          <div class="slider__sign">
+                                            <a class="slider__sign-link" href="#">Телефон з полцены</a>
+                                            <p class="slider__sign-descr">Принеси свой старый  и получи скидку на новый!</p>
+                                         </div>
+                                    </li>
+                                    <li class="slider__items">
+                                        <img src="images/slide1.jpg" alt="slider">
+                                          <div class="slider__sign">
+                                            <a class="slider__sign-link" href="#">IMAC з полцены</a>
+                                            <p class="slider__sign-descr">Принеси свой старый МАК и получи скидку на новый! А может и нет.</p>
+                                         </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slider_controls">
+                                <a class="slider_controls-bautton slider_controls-bautton-prev" id="prev" href="#"><span class="slider_controls__span">Пред.</span></a>
+                                <a class="slider_controls-bautton slider_controls-bautton-next" id="next" href="#"><span class="slider_controls__span">След.</span></a>
                             </div>
                         </article>
                         <!--slider end-->
                         <!--popular goods-->
-
                         <article class="pop-goods-wrap cf">
                             <div class="titles-style-goods-wrapper">
                                 <h2 class="titles-style titles-style-goods">Популярные товары</h2>
                             </div>
                             <div class="some_wrap">
-                             <ul class="pop-goods">
-                              <!--popular goods 1 -->
-                                <li class="goods">
-                                    <div class="goods__item-picture">
-                                        <div class="goods__item-picture-wrap">
-                                           <div class="goods__item-img">
-                                            <img class="goods__image" src="images/item1.png">
+                                <ul class="pop-goods">
+                                    <!--popular goods 1 -->
+                                    <li class="goods">
+                                        <div class="goods__item-picture">
+                                            <div class="goods__item-picture-wrap">
+                                                <div class="goods__item-img">
+                                                    <img class="goods__image" src="images/item1.png">
+                                                </div>
+                                                <a class="goods__item-links" href="#">linklinklink</a>
                                             </div>
-                                            <a class="goods__item-links" href="#">linklinklink</a>
+                                            <ul class="goods__item-description">
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Артикул</p>
+                                                    <p class="goods__item-description_li-right">7869373</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Опция</p>
+                                                    <p class="goods__item-description_li-right">Включена</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Цвет</p>
+                                                    <p class="goods__item-description_li-right">Серебристый</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Размер</p>
+                                                    <p class="goods__item-description_li-right">1280*1245*90</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Вес</p>
+                                                    <p class="goods__item-description_li-right">9кг</p>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <ul class="goods__item-description">
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Артикул</p>
-                                                <p class="goods__item-description_li-right">7869373</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Опция</p>
-                                                <p class="goods__item-description_li-right">Включена</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Цвет</p>
-                                                <p class="goods__item-description_li-right">Серебристый</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Размер</p>
-                                                <p class="goods__item-description_li-right">1280*1245*90</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Вес</p>
-                                                <p class="goods__item-description_li-right">9кг</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                             <!--popular goods 2-->
-                               <li class="goods">
-                                    <div class="goods__item-picture">
-                                        <div class="goods__item-picture-wrap">
-                                        <div class="goods__item-img">
-                                            <img class="goods__image" src="images/item2.png">
+                                    </li>
+                                    <!--popular goods 2-->
+                                    <li class="goods">
+                                        <div class="goods__item-picture">
+                                            <div class="goods__item-picture-wrap">
+                                                <div class="goods__item-img">
+                                                    <img class="goods__image" src="images/item2.png">
+                                                </div>
+                                                <a class="goods__item-links" href="#">link</a>
                                             </div>
-                                            <a class="goods__item-links" href="#">link</a>
+                                            <ul class="goods__item-description">
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Артикул</p>
+                                                    <p class="goods__item-description_li-right">7869373</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Опция</p>
+                                                    <p class="goods__item-description_li-right">Включена</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Цвет</p>
+                                                    <p class="goods__item-description_li-right">Серебристый</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Размер</p>
+                                                    <p class="goods__item-description_li-right">1280*1245*90</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Вес</p>
+                                                    <p class="goods__item-description_li-right">9кг</p>
+                                                </li>
+                                            </ul>
                                         </div>
-                                       <ul class="goods__item-description">
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Артикул</p>
-                                                <p class="goods__item-description_li-right">7869373</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Опция</p>
-                                                <p class="goods__item-description_li-right">Включена</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Цвет</p>
-                                                <p class="goods__item-description_li-right">Серебристый</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Размер</p>
-                                                <p class="goods__item-description_li-right">1280*1245*90</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Вес</p>
-                                                <p class="goods__item-description_li-right">9кг</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <!--popular goods 3-->
-                                 <li class="goods">
-                                    <div class="goods__item-picture">
-                                        <div class="goods__item-picture-wrap">
-                                        <div class="goods__item-img">
-                                            <img class="goods__image" src="images/item3.png">
-                                           </div> 
-                                            <a class="goods__item-links" href="#">link</a>
+                                    </li>
+                                    <!--popular goods 3-->
+                                    <li class="goods">
+                                        <div class="goods__item-picture">
+                                            <div class="goods__item-picture-wrap">
+                                                <div class="goods__item-img">
+                                                    <img class="goods__image" src="images/item3.png">
+                                                </div>
+                                                <a class="goods__item-links" href="#">link</a>
+                                            </div>
+                                            <ul class="goods__item-description">
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Артикул</p>
+                                                    <p class="goods__item-description_li-right">7869373</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Опция</p>
+                                                    <p class="goods__item-description_li-right">Включена</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Цвет</p>
+                                                    <p class="goods__item-description_li-right">Серебристый</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Размер</p>
+                                                    <p class="goods__item-description_li-right">1280*1245*90</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Вес</p>
+                                                    <p class="goods__item-description_li-right">9кг</p>
+                                                </li>
+                                            </ul>
                                         </div>
-                                       <ul class="goods__item-description">
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Артикул</p>
-                                                <p class="goods__item-description_li-right">7869373</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Опция</p>
-                                                <p class="goods__item-description_li-right">Включена</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Цвет</p>
-                                                <p class="goods__item-description_li-right">Серебристый</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Размер</p>
-                                                <p class="goods__item-description_li-right">1280*1245*90</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Вес</p>
-                                                <p class="goods__item-description_li-right">9кг</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                               </ul>
-                              </div> 
+                                    </li>
+                                </ul>
+                            </div>
                         </article>
                         <!--popular goods end-->
                         <!--goods width sale-->
@@ -293,109 +324,107 @@
                                 <h2 class="titles-style titles-style-goods">Товары со скидкой</h2>
                             </div>
                             <div class="some_wrap">
-                            <ul class="pop-goods">
-                                <!--goods width sale 1-->
-                                <li class="goods">
-                                    <div class="goods__item-picture">
-                                        <div class="goods__item-picture-wrap">
-                                        <div class="goods__item-img">
-                                            <img class="goods__image" src="images/item4.png">
-                                           </div> 
-                                            <a class="goods__item-links" href="#">link</a>
+                                <ul class="pop-goods">
+                                    <!--goods width sale 1-->
+                                    <li class="goods">
+                                        <div class="goods__item-picture">
+                                            <div class="goods__item-picture-wrap">
+                                                <div class="goods__item-img">
+                                                    <img class="goods__image" src="images/item4.png">
+                                                </div>
+                                                <a class="goods__item-links" href="#">link</a>
+                                            </div>
+                                            <ul class="goods__item-description">
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Артикул</p>
+                                                    <p class="goods__item-description_li-right">7869373</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Опция</p>
+                                                    <p class="goods__item-description_li-right">Включена</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Цвет</p>
+                                                    <p class="goods__item-description_li-right">Серебристый</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Размер</p>
+                                                    <p class="goods__item-description_li-right">1280*1245*90</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Вес</p>
+                                                    <p class="goods__item-description_li-right">9кг</p>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <ul class="goods__item-description">
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Артикул</p>
-                                                <p class="goods__item-description_li-right">7869373</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Опция</p>
-                                                <p class="goods__item-description_li-right">Включена</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Цвет</p>
-                                                <p class="goods__item-description_li-right">Серебристый</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Размер</p>
-                                                <p class="goods__item-description_li-right">1280*1245*90</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Вес</p>
-                                                <p class="goods__item-description_li-right">9кг</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                               <!--goods width sale 2-->
-                               <li class="goods">
-                                  
-                                    <div class="goods__item-picture">
-                                        <div class="goods__item-picture-wrap">
-                                        <div class="goods__item-img">
-                                            <img class="goods__image" src="images/item5.png">
-                                         </div>   
-                                            <a class="goods__item-links" href="#">link</a>
+                                    </li>
+                                    <!--goods width sale 2-->
+                                    <li class="goods">
+                                        <div class="goods__item-picture">
+                                            <div class="goods__item-picture-wrap">
+                                                <div class="goods__item-img">
+                                                    <img class="goods__image" src="images/item5.png">
+                                                </div>
+                                                <a class="goods__item-links" href="#">link</a>
+                                            </div>
+                                            <ul class="goods__item-description">
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Артикул</p>
+                                                    <p class="goods__item-description_li-right">7869373</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Опция</p>
+                                                    <p class="goods__item-description_li-right">Включена</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Цвет</p>
+                                                    <p class="goods__item-description_li-right">Серебристый</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Размер</p>
+                                                    <p class="goods__item-description_li-right">1280*1245*90</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Вес</p>
+                                                    <p class="goods__item-description_li-right">9кг</p>
+                                                </li>
+                                            </ul>
                                         </div>
-                                       <ul class="goods__item-description">
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Артикул</p>
-                                                <p class="goods__item-description_li-right">7869373</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Опция</p>
-                                                <p class="goods__item-description_li-right">Включена</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Цвет</p>
-                                                <p class="goods__item-description_li-right">Серебристый</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Размер</p>
-                                                <p class="goods__item-description_li-right">1280*1245*90</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Вес</p>
-                                                <p class="goods__item-description_li-right">9кг</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <!--goods width sale 3-->
-                                 <li class="goods">
-                                    <div class="goods__item-picture">
-                                        <div class="goods__item-picture-wrap">
-                                        <div class="goods__item-img">
-                                            <img class="goods__image" src="images/item6.png">
-                                         </div>   
-                                            <a class="goods__item-links" href="#">link</a>
+                                    </li>
+                                    <!--goods width sale 3-->
+                                    <li class="goods">
+                                        <div class="goods__item-picture">
+                                            <div class="goods__item-picture-wrap">
+                                                <div class="goods__item-img">
+                                                    <img class="goods__image" src="images/item6.png">
+                                                </div>
+                                                <a class="goods__item-links" href="#">link</a>
+                                            </div>
+                                            <ul class="goods__item-description">
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Артикул</p>
+                                                    <p class="goods__item-description_li-right">7869373</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Опция</p>
+                                                    <p class="goods__item-description_li-right">Включена</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Цвет</p>
+                                                    <p class="goods__item-description_li-right">Серебристый</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Размер</p>
+                                                    <p class="goods__item-description_li-right">1280*1245*90</p>
+                                                </li>
+                                                <li class="goods__item-description_li">
+                                                    <p class="goods__item-description_li-left">Вес</p>
+                                                    <p class="goods__item-description_li-right">9кг</p>
+                                                </li>
+                                            </ul>
                                         </div>
-                                       <ul class="goods__item-description">
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Артикул</p>
-                                                <p class="goods__item-description_li-right">7869373</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Опция</p>
-                                                <p class="goods__item-description_li-right">Включена</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Цвет</p>
-                                                <p class="goods__item-description_li-right">Серебристый</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Размер</p>
-                                                <p class="goods__item-description_li-right">1280*1245*90</p>
-                                            </li>
-                                            <li class="goods__item-description_li">
-                                                <p class="goods__item-description_li-left">Вес</p>
-                                                <p class="goods__item-description_li-right">9кг</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                               
-                            </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </article>
                         <!--doods width sale end-->
@@ -403,62 +432,95 @@
                 </div>
                 <!--footer begin-->
                 <footer class="footer">
-                 <div class="container">
-                    <!--bottom logo-->
-                    <div class="bottom-logo-wrap">
-                        <div class="bottom-logo">
-                            <img src="images/logo_bottom.png">
+                    <div class="container">
+                        <!--bottom logo-->
+                        <div class="bottom-logo-wrap">
+                            <div class="bottom-logo">
+                                <img src="images/logo_bottom.png">
+                            </div>
                         </div>
-                    </div>
-                    <!--bottom logo end-->
-                    <!-- footer links-->
-                    <div class="footer-links">
-                        <div class="links-wrap">
-                            
-                            <ul class="shop">
-                            <p class="footer-links__name">О магазине</p>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">О Нас</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Наши цены</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Наши скидки</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Акции</a></li>
-                            </ul>
+                        <!--bottom logo end-->
+                        <!-- footer links-->
+                        <div class="footer-links">
+                            <div class="links-wrap">
+                                <ul class="shop">
+                                    <p class="footer-links__name">О магазине</p>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">О Нас</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Наши цены</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Наши скидки</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Акции</a></li>
+                                </ul>
+                            </div>
+                            <div class="links-wrap">
+                                <ul class="shop">
+                                    <p class="footer-links__name">Каталог</p>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Смартфоны</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Планшеты</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Компьютеры</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Аксессуары</a></li>
+                                </ul>
+                            </div>
+                            <div class="links-wrap">
+                                <ul class="shop">
+                                    <p class="footer-links__name">Контакты</p>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Телефоны</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Адреса</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Карта проезда</a></li>
+                                    <li class="shop__item"> <a href="#" class="shop__item__links">Обратная связь</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="links-wrap">
-                            
-                            <ul class="shop">
-                            <p class="footer-links__name">Каталог</p>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Смартфоны</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Планшеты</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Компьютеры</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Аксессуары</a></li>
-                            </ul>
-                        </div>
-                        <div class="links-wrap">
-                            
-                            <ul class="shop">
-                            <p class="footer-links__name">Контакты</p>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Телефоны</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Адреса</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Карта проезда</a></li>
-                                <li class="shop__item"> <a href="#" class="shop__item__links">Обратная связь</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="social-wrap">
                         <div class="social-wrap">
-                            <ul class="social">
-                                <li class="social__links-"><a href="#" class="social__links social__links-app"><img src="images/app.png"></a></li>
-                                <li class="social__links-"><a href="#" class="social__links social__links-gplay"><img src="images/google.png"></a></li>
-                                <li class="social__links-"><a href="#" class="social__links social__links-vk"><img src="images/vk.png"></a></li>
-                                <li class="social__links-"><a href="#" class="social__links social__links-fb"><img src="images/tw.png"></a></li>
-                                <li class="social__links-"><a href="#" class="social__links social__links-tw"><img src="images/tw-78.png"></a></li>
-                            </ul>
+                            <div class="social-wrap">
+                                <ul class="social">
+                                    <li class="social__links-">
+                                        <a href="#" class="social__links social__links-app"><img src="images/app.png"></a>
+                                    </li>
+                                    <li class="social__links-">
+                                        <a href="#" class="social__links social__links-gplay"><img src="images/google.png"></a>
+                                    </li>
+                                    <li class="social__links-">
+                                        <a href="#" class="social__links social__links-vk"><img src="images/vk.png"></a>
+                                    </li>
+                                    <li class="social__links-">
+                                        <a href="#" class="social__links social__links-fb"><img src="images/tw.png"></a>
+                                    </li>
+                                    <li class="social__links-">
+                                        <a href="#" class="social__links social__links-tw"><img src="images/tw-78.png"></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                   </div> 
                 </footer>
             </div>
     </body>
-</body>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script>
+    var countitem = 0;
+    $(document).ready(function() {
+        $('.list-portfel li').each(function(index, element) {
+            ++countitem;
+        });
+        $('.list-portfel').css('width', 740 * countitem);
+
+
+        $('#next').click(function() {
+            var sl = $('#portfel').scrollLeft();
+            var newsl = Number(sl) + Number(740);
+            $('#portfel').animate({
+                scrollLeft: newsl
+            }, 'slow');
+        });
+        $('#prev').click(function() {
+            var sl = $('#portfel').scrollLeft();
+            var newsl = sl - 740;
+            $('#portfel').animate({
+                scrollLeft: newsl
+            }, 'slow');
+        });
+    });
+    </script>
+    <script src="mymain.js"></script>
 
 </html>
