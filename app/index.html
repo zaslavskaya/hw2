@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>   
 <html lang="RU-ru">
 
 <head>
@@ -16,8 +16,12 @@
     <!-- CSS CSS -->
     <link rel="stylesheet" type="text/css" href="bower/normalize.css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
+ 
     <!-- JS-->
     <script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
 </head>
 
 <body>
@@ -38,7 +42,9 @@
                         <!-- logo end-->
                         <!-- form-->
                         <form class="formblock" name="form" id="myForm" action="#">
+                          
                             <h3 class="formblock__name titles-style">Заказать звонок</h3>
+                            
                             <div class="formblock__label-input__wrapper-out">
                                 <div class="formblock__label-input__wrapper">
                                     <label class="formblock__label">Ваше имя</label>
@@ -49,7 +55,8 @@
                                     <input class="formblock__inputs" name="phone" placeholder="+7(912) 000-00-00" />
                                 </div>
                                 <div class="formblock__label-input__wrapper">
-                                    <label class="formblock__label">Дата звонка</label>
+                                    <label class="formblock__label formblock__label-select">Дата звонка</label>
+                                     <div class="styled-select">
                                     <select class="formblock__inputs__select-month" name="date">
                                         <option value="1">01</option>
                                         <option value="2">02</option>
@@ -64,7 +71,12 @@
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-                                    <select class="formblock__inputs__select-day" name="date">
+                                    </div>
+                                 
+
+                                    <div class="styled-select " >
+
+                                    <select class="formblock__inputs__select-day lineForm" name="date" >
                                         <option value="1">01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
@@ -97,7 +109,12 @@
                                         <option value="3">30</option>
                                         <option value="4">31</option>
                                     </select>
+                                  
+                                    </div>
                                 </div>
+
+
+
                                 <textarea class="formblock__textarea" placeholder="Комментарий" name="comments"></textarea>
                                 <div class="formblock__label-input__wrapper">
                                     <button class="formblock__inputs-button-send" value="отправить" type="submit">Отправить</button>
@@ -230,8 +247,8 @@
                         <!--popular goods-->
                         <article class="pop-goods-wrap cf">
                             <div class="titles-style-goods-wrapper">
-                                <h2 class="titles-style titles-style-goods">Популярные товары</h2>
-                            </div>
+                                  <h2 class="titles-style titles-style-goods">Популярные товары</h2>  
+                               </div>
                             <div class="some_wrap">
                                 <ul class="pop-goods">
                                     <!--popular goods 1 -->
@@ -246,24 +263,24 @@
                                             </div>
                                             <ul class="goods__item-description">
                                                 <li class="goods__item-description_li">
-                                                    <p class="goods__item-description_li-left">Артикул</p>
-                                                    <p class="goods__item-description_li-right">7869373</p>
+                                                    <div class="goods__item-description_li-left">Артикул</div>
+                                                    <div class="goods__item-description_li-right">7869373</div>
                                                 </li>
                                                 <li class="goods__item-description_li">
-                                                    <p class="goods__item-description_li-left">Опция</p>
-                                                    <p class="goods__item-description_li-right">Включена</p>
+                                                    <div class="goods__item-description_li-left">Опция</div>
+                                                    <div class="goods__item-description_li-right">Включена</div>
                                                 </li>
                                                 <li class="goods__item-description_li">
-                                                    <p class="goods__item-description_li-left">Цвет</p>
-                                                    <p class="goods__item-description_li-right">Серебристый</p>
+                                                    <div class="goods__item-description_li-left">Цвет</div>
+                                                    <div class="goods__item-description_li-right">Серебристый</div>
                                                 </li>
                                                 <li class="goods__item-description_li">
-                                                    <p class="goods__item-description_li-left">Размер</p>
-                                                    <p class="goods__item-description_li-right">1280*1245*90</p>
+                                                    <div class="goods__item-description_li-left">Размер</div>
+                                                    <div class="goods__item-description_li-right">1280*1245*90</div>
                                                 </li>
                                                 <li class="goods__item-description_li">
-                                                    <p class="goods__item-description_li-left">Вес</p>
-                                                    <p class="goods__item-description_li-right">9кг</p>
+                                                    <div class="goods__item-description_li-left">Вес</div>
+                                                    <div class="goods__item-description_li-right">9кг</div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -515,9 +532,9 @@
                 </footer>
             </div>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.validate.js"></script>
-    <script src="main.js"></script>
+ 
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script src="js/main.js"></script>
     <script type="text/javascript">
   
     $(document).ready(function() {
@@ -529,6 +546,10 @@
                 scrollTop: 0
             }, delay);
         });
+
+
+
+
     });
     </script>
 
