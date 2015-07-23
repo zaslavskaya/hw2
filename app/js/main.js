@@ -1,5 +1,6 @@
 //слайдер 
 $(document).ready(function() {
+
     var countitem = 0;
 
     $('.list-portfel li').each(function(index, element) {
@@ -9,18 +10,24 @@ $(document).ready(function() {
 
 
     $('#next').click(function() {
+       
         var sl = $('#portfel').scrollLeft();
         var newsl = Number(sl) + Number(740);
         $('#portfel').animate({
             scrollLeft: newsl
         }, 'slow');
+         return false;
+
     });
     $('#prev').click(function() {
+       // event.preventDefault();
         var sl = $('#portfel').scrollLeft();
         var newsl = sl - 740;
         $('#portfel').animate({
             scrollLeft: newsl
         }, 'slow');
+         return false;
+      
   
     });
 
@@ -69,7 +76,25 @@ $(document).ready(function() {
 
     });
 
+   $('.formblock__inputs-button-clean').click(function() {
+              //$('#comments-error').removeAttr('id');
+              $('label').remove('#name-error');
+               $('label').remove('#phone-error');
+               $('label').remove('#comments-error');
 
+
+             // $('comments-error::after').remove;
+          
+        });
+
+
+
+    //$('.formblock__inputs-button-clean').onClick({   
+    //  var resettooltip = $('.formblock__inputs').removeClass('error');
+      // }
+                    //var resetPicture = $('#watermark__src-logo').attr('src' , 'img/watermark.png');
+              
+//);
 
 
 });

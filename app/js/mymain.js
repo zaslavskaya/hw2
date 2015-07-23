@@ -228,7 +228,7 @@ $.fn.tooltip = function(options) {
 			.css('opacity', '1');
 	}
 
-
+  
 };
 
 <script type="text/javascript" src="bower/jquery-validation/dist/jquery.validate.js"></script>

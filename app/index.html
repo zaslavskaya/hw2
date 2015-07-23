@@ -532,14 +532,18 @@
                 </footer>
             </div>
     </body>
- 
+  <script src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script src="js/main.js"></script>
+ <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+      
     <script type="text/javascript">
   
     $(document).ready(function() {
+        
         var top_show = 150;
         var delay = 1000;
+
+       
 
         $('#top').click(function() {
             $('body, html').animate({
@@ -547,10 +551,12 @@
             }, delay);
         });
 
+    
+        $('.formblock__inputs').placeholder();
+        $('.formblock__textareas').placeholder();
 
 
-
-    });
+         });
     </script>
 
 </html>
